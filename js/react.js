@@ -1,9 +1,17 @@
+'use strict';
+
+function showThis() {
+  console.log('this in showThis: ', this);
+}
+
 const user = {
-  username: 'Victor',
-  showName() {
-    // ❌ Віктор біжить швидко, тому що Віктор намагається зловити поїзд
-    console.log(this.username);
-  },
+  username: 'Poly',
 };
 
-user.showName();
+user.showContext = showThis;
+
+// Викликаємо в контексті об'єкта
+user.showContext(); // this in showThis: {username: "Poly", showContext: ƒ}
+
+// Викликаємо в глобальному контексті
+showThis(); // "this in showThis: undefined"

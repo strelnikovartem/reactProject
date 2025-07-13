@@ -1,14 +1,15 @@
-('use strict');
+const hotel = {
+  username: 'Resort hotel',
+  showThis() {
+    const foo = () => {
+      console.log('this in foo: ', this);
+    };
 
-const library = {
-  books: 1923,
-  logBookCount() {
-    console.log(this.books);
+    foo();
+    console.log('this in showThis: ', this);
   },
 };
 
-function showBooks(callback) {
-  callback();
-}
-
-showBooks(library.logBookCount.bind(library));
+hotel.showThis();
+// this in foo: {username: 'Resort hotel', showThis: ƒ}
+// this in showThis: {username: 'Resort hotel',showThis: ƒ}

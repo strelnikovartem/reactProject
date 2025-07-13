@@ -1,17 +1,14 @@
-'use strict';
+('use strict');
 
-const customer = {
-  firstName: 'Jacob',
-  lastName: 'Mercer',
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`;
+const library = {
+  books: 1923,
+  logBookCount() {
+    console.log(this.books);
   },
 };
 
-function makeMessage(callback) {
-  // callback() — це виклик методу getFullName в глобальному контексті
-  const username = callback();
-  console.log(`Processing an application from ${username}`);
+function showBooks(callback) {
+  callback();
 }
 
-makeMessage(customer.getFullName.bind(customer)); // TypeError: Cannot read properties of undefined (reading 'firstName')
+showBooks(library.logBookCount.bind(library));

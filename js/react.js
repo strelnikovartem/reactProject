@@ -1,16 +1,14 @@
-function greet(str) {
-  console.log(`${str}, ${this.username}, your room is ${this.room}!`);
-}
+'use strict';
 
-const mango = {
-  username: 'Mango',
-  room: 27,
+const customer = {
+  username: 'Jacob',
+  sayHello() {
+    console.log(`Hello, ${this.username}!`);
+  },
 };
 
-const poly = {
-  username: 'Poly',
-  room: 191,
-};
+customer.sayHello(); // "Hello, Jacob!"
 
-greet.call(mango, 'Welcome', 'fff'); // "Welcome, Mango, your room is 27!"
-greet.call(poly, 'Aloha'); // "Aloha, Poly, your room is 191!"
+const greet = customer.sayHello;
+
+greet(); // TypeError: Cannot read properties of undefined (reading 'username')

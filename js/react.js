@@ -11,3 +11,6 @@ const poly = {
   username: 'Poly',
   room: 191,
 };
+
+greet.call(mango, 'Welcome'); // "Welcome, Mango, your room is 27!"
+greet.call(poly, 'Aloha'); // "Aloha, Poly, your room is 191!"

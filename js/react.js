@@ -9,6 +9,6 @@ const customer = {
 
 customer.sayHello(); // "Hello, Jacob!"
 
-const greet = customer.sayHello;
+const greet = customer.sayHello.bind(customer);
 
 greet(); // TypeError: Cannot read properties of undefined (reading 'username')

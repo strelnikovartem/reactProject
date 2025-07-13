@@ -1,19 +1,13 @@
-'use strict';
-
-function showThis() {
-  console.log('this in showThis: ', this);
+function greet(str) {
+  console.log(`${str}, ${this.username}, your room is ${this.room}!`);
 }
 
-const user = {
-  username: 'Poly',
+const mango = {
+  username: 'Mango',
+  room: 27,
 };
 
-user.showContext = showThis;
-
-// Викликаємо в контексті об'єкта
-user.showContext(); // this in showThis: {username: "Poly", showContext: ƒ}
-
-// Викликаємо в глобальному контексті
-showThis(); // "this in showThis: undefined"
-
-console.log(user);
+const poly = {
+  username: 'Poly',
+  room: 191,
+};

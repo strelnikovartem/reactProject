@@ -14,4 +14,4 @@ function makeMessage(callback) {
   console.log(`Processing an application from ${username}`);
 }
 
-makeMessage(customer.getFullName); // TypeError: Cannot read properties of undefined (reading 'firstName')
+makeMessage(customer.getFullName.bind(customer)); // TypeError: Cannot read properties of undefined (reading 'firstName')

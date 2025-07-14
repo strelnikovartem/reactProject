@@ -1,13 +1,11 @@
-const animal = { legs: 4 };
-const dog = Object.create(animal);
-dog.name = 'Mango';
+const objC = { c: 'objC prop' };
 
-console.log(animal);
-console.log(dog);
+const objB = Object.create(objC);
+objB.b = 'objB prop';
 
-console.log(Object.keys(dog)); // ["name"]
-console.log(Object.values(dog)); // ["Mango"]
+const objA = Object.create(objB);
+objA.a = 'objA prop';
 
-for (const key of Object.keys(dog)) {
-  console.log(key); // "name"
-}
+console.log(objA); // { a: "objA prop", [[Prototype]]: objB }
+console.log(objB); // { b: "objB prop", [[Prototype]]: objC }
+console.log(objC); // { c: "objC prop", [[Prototype]]: Object }

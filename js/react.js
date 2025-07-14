@@ -2,6 +2,9 @@ const animal = { legs: 4 };
 const dog = Object.create(animal);
 dog.name = 'Mango';
 
+console.log(animal);
+console.log(dog);
+
 console.log(Object.keys(dog)); // ["name"]
 console.log(Object.values(dog)); // ["Mango"]
 

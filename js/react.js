@@ -1,15 +1,8 @@
-const hotel = {
-  username: 'Resort hotel',
-  showThis() {
-    const foo = () => {
-      console.log('this in foo: ', this);
-    };
-
-    foo();
-    console.log('this in showThis: ', this);
-  },
+const animal = {
+  legs: 4,
 };
 
-hotel.showThis();
-// this in foo: {username: 'Resort hotel', showThis: ƒ}
-// this in showThis: {username: 'Resort hotel',showThis: ƒ}
+const dog = Object.create(animal);
+dog.name = 'Mango';
+
+console.log(dog); // { name: "Mango", [[Prototype]]: animal }

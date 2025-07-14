@@ -1,11 +1,9 @@
-const objC = { c: 'objC prop' };
+const baseSalary = 30000;
+const overtime = 10;
+const rate = 20;
 
-const objB = Object.create(objC);
-objB.b = 'objB prop';
+const getWage = (baseSalary, overtime, rate) => {
+  return baseSalary + overtime * rate;
+};
 
-const objA = Object.create(objB);
-objA.a = 'objA prop';
-
-console.log(objA); // { a: "objA prop", [[Prototype]]: objB }
-console.log(objB); // { b: "objB prop", [[Prototype]]: objC }
-console.log(objC); // { c: "objC prop", [[Prototype]]: Object }
+console.log(getWage(baseSalary, overtime, rate));

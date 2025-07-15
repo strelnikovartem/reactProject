@@ -1,10 +1,7 @@
-const employee = {
-  baseSalary: 30000,
-  overtime: 10,
-  rate: 20,
-  getWage() {
-    return this.baseSalary + this.overtime * this.rate;
-  },
-};
+class User {}
 
-console.log(employee.getWage());
+const mango = new User();
+console.log(mango); // {}
+
+const poly = new User();
+console.log(poly); // {}

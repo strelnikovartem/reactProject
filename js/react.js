@@ -1,11 +1,9 @@
-class User {
-  constructor(name, email) {
-    console.log(name, email);
+class Car {
+  constructor(brand, model, price) {
+    this.brand = brand;
+    this.model = model;
+    this.price = price;
   }
 }
 
-const mango = new User('Mango', 'mango@mail.com'); // "Mango mango@mail.com"
-// console.log(mango); // {}
-
-const poly = new User('poly', 'fojkk');
-console.log(poly);
+console.log(new Car('Audi', 'Q3', 36000));

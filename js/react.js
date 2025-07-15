@@ -1,9 +1,14 @@
-class Car {
-  constructor(brand, model, price) {
-    this.brand = brand;
-    this.model = model;
-    this.price = price;
+class User {
+  constructor(params) {
+    this.name = params.name;
+    this.email = params.email;
   }
 }
 
-console.log(new Car('Audi', 'Q3', 36000));
+const mango = new User({
+  name: 'Mango',
+  email: 'mango@mail.com',
+});
+
+console.log(mango);
+// { name: "Mango", email: "mango@mail.com" }

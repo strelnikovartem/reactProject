@@ -15,6 +15,14 @@ class User {
   set email(newEmail) {
     this.#email = newEmail;
   }
+  set email(newEmail) {
+    if (newEmail === '') {
+      console.log('Помилка! Пошта не може бути порожнім рядком!');
+      return;
+    }
+
+    this.#email = newEmail;
+  }
 }
 
 const mango = new User({

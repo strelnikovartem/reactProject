@@ -1,27 +1,19 @@
-class Car {
-  static maxPrice = 50000;
-  #price;
+class User {
+  static #takenEmails = [];
+
+  static isEmailTaken(email) {
+    return User.#takenEmails.includes(email);
+  }
+
+  #email;
 
   constructor(params) {
-    this.#price = params.price;
-  }
-
-  get price() {
-    return this.#price;
-  }
-
-  set price(newPrice) {
-    if (newPrice <= Car.maxPrice) {
-      this.#price = newPrice;
-    }
+    this.#email = params.email;
+    User.#takenEmails.push(params.email);
   }
 }
 
-const audi = new Car({ price: 35000 });
-console.log(audi.price); // 35000
+const mango = new User({ email: 'mango@mail.com' });
 
-audi.price = 49000;
-console.log(audi.price); // 49000
-
-audi.price = 51000;
-console.log(audi.price); // 49000
+console.log(User.isEmailTaken('poly@mail.com')); // false
+console.log(User.isEmailTaken('mango@mail.com')); // true

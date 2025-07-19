@@ -1,28 +1,4 @@
 class User {
-  #email;
-
-  constructor(email) {
-    this.#email = email;
-  }
-
-  get email() {
-    return this.#email;
-  }
-
-  set email(newEmail) {
-    this.#email = newEmail;
-  }
-}
-
-class ContentEditor extends User {
-  // Тіло класу ContentEditor
-}
-
-const editor = new ContentEditor('mango@mail.com');
-console.log(editor); // { #email: "mango@mail.com" }
-console.log(editor.email); // "mango@mail.com"
-
-class User {
   constructor(email) {
     this.email = email;
   }
@@ -35,3 +11,11 @@ class User {
     this.email = newEmail;
   }
 }
+
+class Admin extends User {
+  static role = { BASIC: 'basic', SUPERUSER: 'superuser' };
+}
+
+console.log(Admin.role.BASIC);
+
+console.log(Admin.role.SUPERUSER);

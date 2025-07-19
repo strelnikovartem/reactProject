@@ -1,19 +1,20 @@
-class User {
-  static #takenEmails = [];
-
-  static isEmailTaken(email) {
-    return User.#takenEmails.includes(email);
+class Car {
+  static #maxPrice = 50000;
+  static checkPrice(price) {
+    if (price > Car.#maxPrice) {
+      return 'Error! Price exceeds the maximum';
+    } else {
+      return 'Success! Price is within acceptable limits';
+    }
   }
 
-  #email;
-
   constructor(params) {
-    this.#email = params.email;
-    User.#takenEmails.push(params.email);
+    this.price = params.price;
   }
 }
 
-const mango = new User({ email: 'mango@mail.com' });
+const audi = new Car({ price: 36000 });
+const bmw = new Car({ price: 64000 });
 
-console.log(User.isEmailTaken('poly@mail.com')); // false
-console.log(User.isEmailTaken('mango@mail.com')); // true
+console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"

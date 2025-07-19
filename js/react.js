@@ -1,20 +1,37 @@
-class Car {
-  static #maxPrice = 50000;
-  static checkPrice(price) {
-    if (price > Car.#maxPrice) {
-      return 'Error! Price exceeds the maximum';
-    } else {
-      return 'Success! Price is within acceptable limits';
-    }
+class User {
+  #email;
+
+  constructor(email) {
+    this.#email = email;
   }
 
-  constructor(params) {
-    this.price = params.price;
+  get email() {
+    return this.#email;
+  }
+
+  set email(newEmail) {
+    this.#email = newEmail;
   }
 }
 
-const audi = new Car({ price: 36000 });
-const bmw = new Car({ price: 64000 });
+class ContentEditor extends User {
+  // Тіло класу ContentEditor
+}
 
-console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
-console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+const editor = new ContentEditor('mango@mail.com');
+console.log(editor); // { #email: "mango@mail.com" }
+console.log(editor.email); // "mango@mail.com"
+
+class User {
+  constructor(email) {
+    this.email = email;
+  }
+
+  get email() {
+    return this.email;
+  }
+
+  set email(newEmail) {
+    this.email = newEmail;
+  }
+}

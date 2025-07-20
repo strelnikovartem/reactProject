@@ -7,6 +7,9 @@ class Car {
   getModel() {
     return this.brend;
   }
+  changeModel(newBrend) {
+    this.brend = newBrend;
+  }
 }
 
 const bmw = new Car({ brend: 'bmw', model: 'x5', price: '50' });

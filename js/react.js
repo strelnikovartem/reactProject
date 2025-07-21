@@ -1,4 +1,5 @@
 class Car {
+  #price;
   constructor(obj) {
     this.brend = obj.brend;
     this.model = obj.model;
@@ -10,6 +11,12 @@ class Car {
   changeModel(newBrend) {
     this.brend = newBrend;
   }
+
+  get price() {
+    return this.#price;
+  }
+
+  set price()
 }
 
 const bmw = new Car({ brend: 'bmw', model: 'x5', price: '50' });
@@ -21,3 +28,4 @@ bmw.changeModel('BmW');
 console.log(bmw.getModel());
 console.log(audi.getModel());
 console.log(lada);
+console.log(bmw.price);

@@ -3,7 +3,7 @@ class Car {
   constructor(obj) {
     this.brend = obj.brend;
     this.model = obj.model;
-    this.price = obj.price;
+    this.#price = obj.price;
   }
   getModel() {
     return this.brend;
@@ -16,12 +16,18 @@ class Car {
     return this.#price;
   }
 
-  set price()
+  set price(poop) {
+    this.#price = poop;
+    if (poop !== 'number') {
+    }
+  }
 }
 
-const bmw = new Car({ brend: 'bmw', model: 'x5', price: '50' });
+const bmw = new Car({ brend: 'bmw', model: 'x5', price: '500' });
 const audi = new Car({ brend: 'audi', model: 'q7', price: '100' });
 const lada = new Car({ brend: 'lada', model: 'pri', price: '10' });
+
+bmw.price = 600;
 
 bmw.changeModel('BmW');
 

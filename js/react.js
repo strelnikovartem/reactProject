@@ -17,7 +17,7 @@ class Car {
   }
 
   set price(poop) {
-    if (poop !== 'number') {
+    if (typeof poop !== 'number') {
       console.log('ggg');
       return;
     }
@@ -29,7 +29,7 @@ const bmw = new Car({ brend: 'bmw', model: 'x5', price: 500 });
 const audi = new Car({ brend: 'audi', model: 'q7', price: 100 });
 const lada = new Car({ brend: 'lada', model: 'pri', price: 10 });
 
-bmw.price = '1';
+bmw.price = '670';
 
 console.log(typeof bmw.price);
 

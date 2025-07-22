@@ -1,4 +1,6 @@
 class Car {
+  static rrr = 0;
+
   #price;
   constructor(obj) {
     this.brend = obj.brend;
@@ -39,3 +41,5 @@ bmw.changeModel('BmW');
 // console.log(audi.getModel());
 // console.log(lada);
 console.log(bmw.price);
+
+console.log(Car.rrr);

@@ -1,11 +1,16 @@
 class Car {
   static rrr = 0;
 
+  static increment() {
+    Car.rrr += 1;
+  }
+
   #price;
   constructor(obj) {
     this.brend = obj.brend;
     this.model = obj.model;
     this.#price = obj.price;
+    Car.increment();
   }
   getModel() {
     return this.brend;

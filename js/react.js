@@ -31,6 +31,8 @@ const lada = new Car({ brend: 'lada', model: 'pri', price: '10' });
 
 bmw.price = 900;
 
+console.log(bmw.price);
+
 bmw.changeModel('BmW');
 
 // console.log(bmw.getModel());

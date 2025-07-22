@@ -17,10 +17,11 @@ class Car {
   }
 
   set price(poop) {
-    this.#price = poop;
     if (poop !== 'number') {
-      return `Invalid price`;
+      console.log('ggg');
+      return;
     }
+    this.#price = poop;
   }
 }
 
@@ -28,11 +29,11 @@ const bmw = new Car({ brend: 'bmw', model: 'x5', price: '500' });
 const audi = new Car({ brend: 'audi', model: 'q7', price: '100' });
 const lada = new Car({ brend: 'lada', model: 'pri', price: '10' });
 
-bmw.price = '900';
+bmw.price = 900;
 
 bmw.changeModel('BmW');
 
-console.log(bmw.getModel());
-console.log(audi.getModel());
-console.log(lada);
+// console.log(bmw.getModel());
+// console.log(audi.getModel());
+// console.log(lada);
 console.log(bmw.price);

@@ -19,6 +19,7 @@ class Car {
   set price(poop) {
     this.#price = poop;
     if (poop !== 'number') {
+      return `Invalid price`;
     }
   }
 }
@@ -27,7 +28,7 @@ const bmw = new Car({ brend: 'bmw', model: 'x5', price: '500' });
 const audi = new Car({ brend: 'audi', model: 'q7', price: '100' });
 const lada = new Car({ brend: 'lada', model: 'pri', price: '10' });
 
-bmw.price = 600;
+bmw.price = '900';
 
 bmw.changeModel('BmW');
 

@@ -34,7 +34,7 @@ class Car {
 
 const bmw = new Car({ brend: 'bmw', model: 'x5', price: 500 });
 const audi = new Car({ brend: 'audi', model: 'q7', price: 100 });
-// const lada = new Car({ brend: 'lada', model: 'pri', price: 10 });
+const lada = new Car({ brend: 'lada', model: 'pri', price: 10 });
 
 bmw.price = '670';
 

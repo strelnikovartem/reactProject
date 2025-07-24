@@ -1,5 +1,3 @@
-const el = document.querySelector('.text');
-const nested = document.querySelector('.sub-text');
-
-console.log(el.textContent); // "Username: Mango"
-console.log(nested.textContent); // "Mango"
+const link = document.querySelector('.link');
+console.log(link.classList);
+// ["link", "is-active", length: 2, value: "link is-active"]

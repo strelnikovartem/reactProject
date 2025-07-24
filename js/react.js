@@ -6,3 +6,7 @@ console.log(link.classList);
 const hasActiveClass = link.classList.contains('title'); // false
 
 console.log(hasActiveClass);
+
+link.classList.add('special');
+console.log(link.classList);
+// ["link", "is-active", "special", length: 3, value: "link is-active special"]

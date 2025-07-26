@@ -1,7 +1,7 @@
-const button = document.querySelector('.my-button');
+const singleBtn = document.querySelector('#single');
 
 const handleClick = () => {
-  console.log('The button was pressed and now the next image will appear');
+  console.log('click event listener callback');
 };
 
-button.addEventListener('click', handleClick);
+singleBtn.addEventListener('click', handleClick);

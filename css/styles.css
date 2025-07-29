@@ -36,3 +36,12 @@ a {
 .gallery-item {
   flex-basis: calc ((100% - 48px) / 3);
 }
+
+.box {
+  display: block;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}

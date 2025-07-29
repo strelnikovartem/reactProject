@@ -26,3 +26,13 @@ p {
 a {
   text-decoration: none;
 }
+
+.gallery {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 48px 24px;
+}
+
+.gallery-item {
+  flex-basis: calc ((100% - 48px) / 3);
+}

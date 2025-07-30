@@ -8,5 +8,6 @@ let step = 0;
 function hendelClick() {
   step += 50;
   console.log(step);
-  // box.style.marginTop = '100px';
+  box.style.marginTop = `${step}px`;
+  box.style.marginLeft = `${step}px`;
 }

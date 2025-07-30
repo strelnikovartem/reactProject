@@ -2,6 +2,7 @@ const btn = document.querySelector('.js-button');
 const box = document.querySelector('.js-box');
 
 btn.addEventListener('click', hendelClick);
+box.addEventListener('click', hendelClick);
 
 let step = 0;
 

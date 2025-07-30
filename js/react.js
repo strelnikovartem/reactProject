@@ -3,6 +3,10 @@ const box = document.querySelector('.js-box');
 
 btn.addEventListener('click', hendelClick);
 
+let step = 0;
+
 function hendelClick() {
-  console.log('ok');
+  step += 50;
+  console.log(step);
+  // box.style.marginTop = '100px';
 }

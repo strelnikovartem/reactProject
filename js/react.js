@@ -69,4 +69,6 @@ container.insertAdjacentHTML('beforeend', createMarcup(cars));
 
 form.addEventListener('submit', hendleSubmit);
 
-function hendleSubmit(event) {}
+function hendleSubmit(event) {
+  event.preventDefolt;
+}

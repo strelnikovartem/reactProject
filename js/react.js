@@ -39,19 +39,34 @@ const cars = [
     car: 'Volvo',
     type: 'XC60',
     price: 7000,
-    img: 'https://www.autokomplex-olomouc.cz/assets/market/img/hero/volvo_xc60_hybrid_2025_hero_processed_2048.jpg?w=1600'
+    img: 'https://www.autokomplex-olomouc.cz/assets/market/img/hero/volvo_xc60_hybrid_2025_hero_processed_2048.jpg?w=1600',
+  },
 ];
 
 const form = document.querySelector('.js-form');
 const container = document.querySelector('.js-list');
 
 function createMarcup(arr) {
-  return arr.map(car => `
+  return arr
+    .map(
+      car => `
   <li class="car-card" data-id="${car.id}">
   <img src="${car.img}" alt"${car.type}" class="car-image"/>
   <h1 class="car-title">${car.car}</h1>
   <h3 class="car-type">${car.type}</h3>
   <span class="car-price">${car.price}</span>
   </li>
-  `).join("")
+  `
+    )
+    .join('');
 }
+
+container.style.displey = 'flex';
+container.style.flexWrap = 'wrap';
+container.style.gap = '20px';
+
+container.insertAdjacentHTML('beforeend', createMarcup(cars));
+
+form.addEventListener('submit', hendleSubmit);
+
+function hendleSubmit(event) {}

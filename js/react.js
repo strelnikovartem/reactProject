@@ -11,7 +11,7 @@ const cars = [
     car: 'Honda',
     type: 'Civic',
     price: 12000,
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU',
+    img: 'https://www.honda.cz/content/dam/central/cars/civic-hybrid/overview-v3/Honda-civic-hybrid-16-16x9.png/_jcr_content/renditions/c3.png',
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const cars = [
     car: 'BMW',
     type: '5 siries',
     price: 9000,
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU',
+    img: 'https://www.cartecgroup.com/app/uploads/2024/03/16790522869233810-2-.png',
   },
   {
     id: 5,
@@ -39,6 +39,8 @@ const cars = [
     car: 'Volvo',
     type: 'XC60',
     price: 7000,
-    img: 'https://www.volvocars.com/media/shared-assets/master/images/pages/my19/xc60-my19/accessories/xc60my19_accessories_exteriorfeature2_1.jpg?w=320',
-  },
+    img: 'https://www.autokomplex-olomouc.cz/assets/market/img/hero/volvo_xc60_hybrid_2025_hero_processed_2048.jpg?w=1600'
 ];
+
+const form = document.querySelector('.js-form');
+const container = document.querySelector('.js-list');

@@ -47,6 +47,10 @@ const container = document.querySelector('.js-list');
 
 function createMarcup(arr) {
   return arr.map(car => `
-  <li class="car-card" data-id="${car.id}"></li>
+  <li class="car-card" data-id="${car.id}">
+  <img src="${car.img}" alt"${car.type}" class="car-image"/>
+  <h1 class="car-title">${car.type}</h1>
+  
+  </li>
   `)
 }

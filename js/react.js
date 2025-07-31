@@ -44,3 +44,9 @@ const cars = [
 
 const form = document.querySelector('.js-form');
 const container = document.querySelector('.js-list');
+
+function createMarcup(arr) {
+  return arr.map(car => `
+  <li class="car-card"></li>
+  `)
+}

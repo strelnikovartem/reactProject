@@ -72,5 +72,12 @@ form.addEventListener('submit', hendleSubmit);
 function hendleSubmit(event) {
   event.preventDefault();
 
-  console.log(event);
+  const query = event.target.elements.query;
+  const options = event.target.elements.options;
+
+  const result = cars.filter(item =>
+    item[options.value].toLowerCase().includes(query.value.toLowerCase())
+  );
+
+  container.innerHTML = createMarcup(result);
 }

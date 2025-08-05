@@ -23,11 +23,3 @@ input {
 body {
   margin: 8px;
 }
-
-.box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 8px;
-  border: 1px solid black;
-}

@@ -1,12 +1,12 @@
-const container = document.querySelector('.container');
+// const container = document.querySelector('.container');
 
-container.addEventListener('click', henleClick);
+// container.addEventListener('click', henleClick);
 
-function henleClick(evt) {
-  if (!evt.target.classList.contains('box')) {
-    return;
-  }
+// function henleClick(evt) {
+//   if (!evt.target.classList.contains('box')) {
+//     return;
+//   }
 
-  const color = evt.target.dataset.color;
-  console.log(color);
-}
+//   const color = evt.target.dataset.color;
+//   console.log(color);
+// }

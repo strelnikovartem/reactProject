@@ -21,3 +21,29 @@ const products = [
     description: '10-inch tablet with high performance and a Retina display.',
   },
 ];
+
+const container = document.querySelector('.products');
+
+container.insertAdjacentHTML('beforeend', createMarkup(products));
+container.addEventListener('click', hendleClick);
+
+function createMarkup(arr) {
+  return arr
+    .map(
+      item => `
+  <li class="item produkt-item" data-id="${item.id}">
+    <img src="${item.img}" alt="${item.name}" width="300"/>
+    <h2 >${item.name}</h2>
+    <p>${item.price}</p>
+  </li>`
+    )
+    .join('');
+}
+
+function hendleClick(evt) {
+  if (evt.currentTarget === evt.target) {
+    return;
+  }
+  const currentProduct = evt.target.closest('.produkt-item');
+  console.log(currentProduct);
+}

@@ -47,7 +47,8 @@ function hendleClick(evt) {
   const currentProduct = evt.target.closest('.produkt-item');
   const id = currentProduct.dataset.id;
   const product = products.find(item => item.id === Number(id));
-  console.log(product);
-}
 
-console.log(window);
+  const instance = basicLightbox.create(`
+	<div class="modal">
+`);
+}

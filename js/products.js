@@ -45,5 +45,9 @@ function hendleClick(evt) {
     return;
   }
   const currentProduct = evt.target.closest('.produkt-item');
-  console.log(currentProduct);
+  const id = currentProduct.dataset.id;
+  const product = products.find(item => item.id === Number(id));
+  console.log(product);
 }
+
+console.log(window);

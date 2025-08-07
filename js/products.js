@@ -60,14 +60,3 @@ function hendleClick(evt) {
   instance.className;
   instance.show();
 }
-
-const user = {
-  name: 'Jacob',
-  age: 32,
-  status: false,
-};
-
-const { name, age, status } = user;
-console.log(name); // Jacob
-console.log(age); // 32
-console.log(status); // 32

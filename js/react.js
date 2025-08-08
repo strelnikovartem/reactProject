@@ -43,7 +43,12 @@
 //   return color;
 // }
 
-const color = [200, 255, 100];
-const [red, green, blue] = color;
+const user = {
+  name: 'alice',
+  age: 30,
+  //   city: 'w',
+};
 
-console.log(`rgb(${red}, ${green}, ${blue})`); // “rgb(200, 255, 100)"
+const { name, age, city = 'dnipro' } = user;
+
+console.log(city);

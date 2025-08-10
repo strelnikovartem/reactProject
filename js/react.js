@@ -42,13 +42,3 @@
 
 //   return color;
 // }
-
-const user = {
-  name: 'alice',
-  age: 30,
-  //   city: 'w',
-};
-
-const { name, age, city = 'dnipro' } = user;
-
-console.log(city);

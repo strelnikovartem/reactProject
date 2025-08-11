@@ -9,5 +9,6 @@ form.addEventListener('input', evt => {
 form.addEventListener('submit', evt => {
   evt.preventDefault();
   console.log(evt.target.elements.message.value);
+  localStorage.removeItem(localStorageKey);
   form.reset();
 });

@@ -3,11 +3,10 @@ const settings = {
   isAuthenticated: true,
   options: [1, 2, 3],
 };
-
 localStorage.setItem('settings', JSON.stringify(settings));
 
-const savedTheme = localStorage.getItem('ui-theme');
-console.log(savedTheme); // "light"
+const savedSettings = localStorage.getItem('settings');
+console.log(savedSettings); // A string
 
-const savedSet = localStorage.getItem('settings');
-console.log(JSON.parse(savedSet));
+const parsedSettings = JSON.parse(savedSettings);
+console.log(parsedSettings); // Settings object

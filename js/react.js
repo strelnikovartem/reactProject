@@ -1,4 +1,7 @@
-console.log(window.localStorage);
-// Storage {length: 0}
+const settings = {
+  theme: 'dark',
+  isAuthenticated: true,
+  options: [1, 2, 3],
+};
 
-localStorage.setItem('ui-theme', 'light');
+localStorage.setItem('settings', JSON.stringify(settings));

@@ -1,8 +1,10 @@
 const form = document.querySelector('.feedback-form');
+const textarea = form.elements.message;
 const localStorageKey = 'goit-example-message';
 
+textarea.value = localStorage.getItem(localStorageKey) ?? '';
+
 form.addEventListener('input', evt => {
-  console.log(evt.target.value);
   localStorage.setItem(localStorageKey, evt.target.value);
 });
 

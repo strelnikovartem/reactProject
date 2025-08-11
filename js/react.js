@@ -2,6 +2,7 @@ const form = document.querySelector('.feedback-form');
 const localStorageKey = 'goit-example-message';
 
 form.addEventListener('input', evt => {
+  console.log(evt.target);
   localStorage.setItem(localStorageKey, evt.target.value);
 });
 

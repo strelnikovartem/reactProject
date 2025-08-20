@@ -4,6 +4,7 @@ const form = document.querySelector('.feedback-form');
 const textarea = document.querySelector('textarea');
 
 textarea.addEventListener('input', handleInput);
+form.addEventListener('submit', handleSubmit);
 
 populateTextArea();
 

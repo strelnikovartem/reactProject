@@ -12,6 +12,7 @@ function handleSubmit(event) {
   event.preventDefault();
 
   event.currentTarget.reset();
+  localStorage.removeItem(STORAGE_KEY);
 }
 
 function handleInput(event) {

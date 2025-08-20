@@ -10,6 +10,8 @@ populateTextArea();
 
 function handleSubmit(event) {
   event.preventDefault();
+
+  event.currentTarget.reset();
 }
 
 function handleInput(event) {

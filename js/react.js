@@ -8,6 +8,10 @@ form.addEventListener('submit', handleSubmit);
 
 populateTextArea();
 
+function handleSubmit(event) {
+  event.preventDefault();
+}
+
 function handleInput(event) {
   const message = event.target.value;
   localStorage.setItem(STORAGE_KEY, message);

@@ -36,3 +36,21 @@ const instruments = [
 const LS_KEY = 'basket';
 
 const container = document.querySelector('.js-list');
+
+container.insertAdjacentHTML('beforeend', createMarkup(instruments));
+
+function createMarkup(arr) {
+  return arr
+    .map(
+      ({ id, img, name, price, description }) => `
+    <li class="product-card js-product" data-id='${id}'>
+    <img src="${img}" alt="${name} class="product-img"/>
+    <h2 class="product-title">${name}</h2>
+    <p class="product-description">${description}</p>
+    <p class="product-price">${price}</p>
+    <button class="product-add-btn js-btn">Add to basket</button>
+    </li>
+  `
+    )
+    .join('');
+}

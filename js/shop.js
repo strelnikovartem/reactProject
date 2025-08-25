@@ -66,7 +66,7 @@ function hendleClick(event) {
   const productId = +parent.dataset.id;
   const currentProduct = instruments.find(({ id }) => id === productId);
 
-  const product = JSON.parse(localStorage.getItem(LS_KEY));
-
+  const product = JSON.parse(localStorage.getItem(LS_KEY)) || [];
+  const index = product.findIndex(({ id }) => id === productId);
   console.log(product);
 }

@@ -68,5 +68,6 @@ function hendleClick(event) {
 
   const product = JSON.parse(localStorage.getItem(LS_KEY)) || [];
   const index = product.findIndex(({ id }) => id === productId);
-  console.log(product);
+  if (index === -1) {
+  }
 }

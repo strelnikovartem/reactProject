@@ -58,7 +58,7 @@ function createMarkup(arr) {
 }
 
 function hendleClick(event) {
-  if (event.target.classList.contains('js-btn')) {
+  if (!event.target.classList.contains('js-btn')) {
     console.log('ok');
   }
 }

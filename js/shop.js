@@ -64,5 +64,7 @@ function hendleClick(event) {
 
   const parent = event.target.closest('.js-product');
   const productId = +parent.dataset.id;
-  console.log(productId);
+  const currentProduct = instruments.find(({ id }) => id === productId);
+
+  console.log(currentProduct);
 }

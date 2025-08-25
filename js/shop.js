@@ -57,8 +57,7 @@ function createMarkup(arr) {
     .join('');
 }
 
-function hendleClick() {
-    if () {
-        
-    }
+function hendleClick(event) {
+  if (event) {
+  }
 }

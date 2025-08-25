@@ -71,5 +71,7 @@ function hendleClick(event) {
   if (index === -1) {
     currentProduct.qty = 1;
     product.push(currentProduct);
+  } else {
+    products[index];
   }
 }

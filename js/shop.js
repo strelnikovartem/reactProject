@@ -39,6 +39,8 @@ const container = document.querySelector('.js-list');
 
 container.insertAdjacentHTML('beforeend', createMarkup(instruments));
 
+container.addEventListener('click', hendleClick);
+
 function createMarkup(arr) {
   return arr
     .map(
@@ -53,4 +55,10 @@ function createMarkup(arr) {
   `
     )
     .join('');
+}
+
+function hendleClick() {
+    if () {
+        
+    }
 }

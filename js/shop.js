@@ -70,6 +70,6 @@ function hendleClick(event) {
   const index = product.findIndex(({ id }) => id === productId);
   if (index === -1) {
     currentProduct.qty = 1;
-    console.log(currentProduct);
+    product.push(currentProduct);
   }
 }

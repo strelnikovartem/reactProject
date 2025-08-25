@@ -59,6 +59,10 @@ function createMarkup(arr) {
 
 function hendleClick(event) {
   if (!event.target.classList.contains('js-btn')) {
-    console.log('ok');
+    return;
   }
+
+  const parent = event.target.closest('.js-product');
+
+  console.log(parent);
 }

@@ -63,6 +63,6 @@ function hendleClick(event) {
   }
 
   const parent = event.target.closest('.js-product');
-  const productId = parent.dataset.id;
+  const productId = +parent.dataset.id;
   console.log(productId);
 }
